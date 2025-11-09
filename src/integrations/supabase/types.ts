@@ -14,7 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      satellite_data: {
+        Row: {
+          acquisition_time: string
+          cloud_coverage: number | null
+          created_at: string | null
+          id: string
+          latitude: number
+          longitude: number
+          processing_status: string | null
+          risk_indicators: Json | null
+          source: string | null
+          temperature: number | null
+          updated_at: string | null
+          vegetation_index: number | null
+          water_index: number | null
+        }
+        Insert: {
+          acquisition_time: string
+          cloud_coverage?: number | null
+          created_at?: string | null
+          id?: string
+          latitude: number
+          longitude: number
+          processing_status?: string | null
+          risk_indicators?: Json | null
+          source?: string | null
+          temperature?: number | null
+          updated_at?: string | null
+          vegetation_index?: number | null
+          water_index?: number | null
+        }
+        Update: {
+          acquisition_time?: string
+          cloud_coverage?: number | null
+          created_at?: string | null
+          id?: string
+          latitude?: number
+          longitude?: number
+          processing_status?: string | null
+          risk_indicators?: Json | null
+          source?: string | null
+          temperature?: number | null
+          updated_at?: string | null
+          vegetation_index?: number | null
+          water_index?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
