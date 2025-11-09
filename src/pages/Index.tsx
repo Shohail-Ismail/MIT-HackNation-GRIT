@@ -161,7 +161,8 @@ const Index = () => {
                   icon={Droplets}
                   description="Water-related hazards"
                   explanation="Flood risk measures how likely the area is to experience water-related disasters based on elevation, soil saturation, proximity to water bodies, and historical flood events. It considers factors like drainage capacity and topographic vulnerability."
-                  transparencyNote="This score is based on open Earth observation data including elevation models, soil moisture data, and historical flood records. No personal or sensitive information is used."
+                  calculationMethod="Score is calculated by combining:\n• Average precipitation (weighted x2)\n• Maximum precipitation probability (weighted x0.3)\n• Elevation penalty: +30 points if below 50m, +15 if below 200m\n• Humidity bonus: +15 points if relative humidity exceeds 80%\n\nThe final score is capped at 100 and represents cumulative flood risk factors."
+                  transparencyNote="This score uses real-time data from Open-Meteo API, including current weather conditions, 7-day precipitation forecasts, and elevation data. All data is publicly available and updated continuously."
                 />
                 <InteractiveRiskCard
                   title="Wildfire Risk"
@@ -169,7 +170,8 @@ const Index = () => {
                   icon={Flame}
                   description="Fire danger assessment"
                   explanation="Wildfire risk assesses the likelihood of fire hazards based on vegetation density, dryness levels, historical fire patterns, temperature trends, and proximity to fire-prone areas. It includes both natural and human-caused fire susceptibility."
-                  transparencyNote="Derived from satellite vegetation indices, climate data, and fire history databases. All data sources are publicly available environmental monitoring systems."
+                  calculationMethod="Score is calculated by combining:\n• High temperature penalty: (temp - 30°C) x3 points when above 30°C\n• Low humidity penalty: +30 points if relative humidity is below 30%\n• Wind speed factor: maximum value of (wind speed or 20), capped at 20 points\n• Low precipitation penalty: +20 points if average precipitation is below 2mm\n\nThe final score is capped at 100, reflecting combined fire risk conditions."
+                  transparencyNote="This score uses real-time weather data from Open-Meteo API, including temperature, humidity, wind speed, and precipitation measurements from the past 7 days and current conditions."
                 />
                 <InteractiveRiskCard
                   title="Storm Risk"
@@ -177,7 +179,8 @@ const Index = () => {
                   icon={Wind}
                   description="Severe weather patterns"
                   explanation="Storm risk evaluates exposure to severe weather including hurricanes, tornadoes, severe thunderstorms, and high wind events. It considers geographic location, historical storm paths, and atmospheric conditions that favor storm development."
-                  transparencyNote="Based on meteorological records, storm tracking data, and climate pattern analysis from open weather databases and atmospheric research data."
+                  calculationMethod="Score is calculated by combining:\n• Maximum wind speed (weighted x2)\n• Maximum precipitation probability (weighted x0.4)\n• Temperature variation: +20 points if daily variation exceeds 15°C, otherwise uses the variation value directly\n\nThis methodology captures both direct storm indicators (wind, precipitation) and atmospheric instability (temperature swings). The final score is capped at 100."
+                  transparencyNote="This score uses real-time data from Open-Meteo API, analyzing 7-day wind speed forecasts, precipitation probabilities, and temperature variations to assess storm likelihood."
                 />
                 <InteractiveRiskCard
                   title="Drought Risk"
@@ -185,7 +188,8 @@ const Index = () => {
                   icon={Sun}
                   description="Water scarcity potential"
                   explanation="Drought risk measures water scarcity potential by analyzing precipitation patterns, soil moisture levels, temperature trends, and water resource availability. It considers both short-term dry periods and long-term aridification trends."
-                  transparencyNote="Calculated using precipitation data, soil moisture sensors, and water resource databases. All measurements come from open environmental monitoring networks."
+                  calculationMethod="Score is calculated by combining:\n• Low precipitation penalty: +40 points if below 5mm, +20 if below 10mm\n• High temperature penalty: (temp - 25°C) x2 points when above 25°C\n• Low humidity penalty: +30 points if relative humidity is below 40%, +15 if below 60%\n\nThis captures water deficit conditions through multiple indicators. The final score is capped at 100."
+                  transparencyNote="This score uses real-time data from Open-Meteo API, including 7-day precipitation averages, current temperature, and relative humidity measurements to assess drought conditions."
                 />
               </div>
             </section>

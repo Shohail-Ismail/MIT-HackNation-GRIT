@@ -17,6 +17,7 @@ interface InteractiveRiskCardProps {
   icon: LucideIcon;
   description: string;
   explanation: string;
+  calculationMethod: string;
   transparencyNote: string;
 }
 
@@ -40,6 +41,7 @@ const InteractiveRiskCard = ({
   icon: Icon, 
   description, 
   explanation,
+  calculationMethod,
   transparencyNote 
 }: InteractiveRiskCardProps) => {
   const risk = getRiskLevel(score);
@@ -94,9 +96,14 @@ const InteractiveRiskCard = ({
           </div>
           
           <div className="pt-4 border-t">
+            <h4 className="font-semibold mb-2">Calculation Methodology</h4>
+            <p className="text-sm text-muted-foreground whitespace-pre-line">{calculationMethod}</p>
+          </div>
+          
+          <div className="pt-4 border-t">
             <h4 className="font-semibold mb-2 flex items-center gap-2">
               <Info className="h-4 w-4 text-primary" />
-              Transparency Note
+              Data Sources & Transparency
             </h4>
             <p className="text-sm text-muted-foreground">{transparencyNote}</p>
           </div>
