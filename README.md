@@ -34,8 +34,8 @@ The insurance and reinsurance industry loses billions annually due to inadequate
 
 ```bash
 # Clone the repository
-git clone <YOUR_GIT_URL>
-cd <YOUR_PROJECT_NAME>
+git clone https://github.com/Shohail-Ismail/grit/
+cd grit
 
 # Install dependencies
 npm install
@@ -202,8 +202,8 @@ VITE_SUPABASE_PROJECT_ID=<auto-configured>
 
 For satellite data functionality, configure these secrets:
 
-- `COPERNICUS_CLIENT_ID`: OAuth client ID from Copernicus Data Space
-- `COPERNICUS_CLIENT_SECRET`: OAuth client secret
+- `COPERNICUS_CLIENT_ID`: ECMWF ID from Copernicus Data Space
+- `COPERNICUS_CLIENT_SECRET`: ECMWF API key
 
 **Setup**:
 1. Register at [Copernicus Data Space](https://dataspace.copernicus.eu/)
