@@ -19,6 +19,12 @@ Prototype built in 24 hours using Lovable and Google Cloud for [MITxOpenAI Hack-
 
 ---
 
+<br>
+
+![GRIT Homepage](public/home.jpg)
+
+<br>
+
 GRIT is a real-time, climate risk assessment tool for insurance, reinsurance, and catastrophe-modelling teams. It delivers sub-10m geospatial analysis, <60-second risk scoring, and parametric payout estimates, combining satellite imagery, climate feeds, and a lightweight geospatial backend.
 
 Designed to answer the core underwriting question: *What is the climate-related financial risks to insure someone in this area, both historically and now?*
@@ -65,8 +71,14 @@ npm install
 npm run dev
 ```
 
-App runs at:
-`http://localhost:5173`
+<br>
+
+### App runs at `http://localhost:5173`:
+> Use 'Auto-fill Demo Credentials' option for quick demo.
+
+<br>
+
+![GRIT Sign-in/up page](public/sign-in.jpg)
 
 ---
 
