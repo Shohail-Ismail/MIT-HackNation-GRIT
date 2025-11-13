@@ -12,6 +12,7 @@ import InteractiveKPISection from "@/components/InteractiveKPISection";
 import TransparencyPanel from "@/components/TransparencyPanel";
 import Footer from "@/components/Footer";
 import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
 
 import { downloadCSV } from "@/utils/csvExport";
 import { toast } from "sonner";
@@ -50,24 +51,14 @@ const Index = () => {
     toast.info("Analyzing location with real-time data...");
     
     try {
-      // Call the backend function to get real climate data
-      const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/analyze-location`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${session?.access_token}`,
-          },
-          body: JSON.stringify({ latitude: lat, longitude: lng }),
-        }
-      );
+      // Call the backend function using Supabase client
+      const { data, error } = await supabase.functions.invoke('analyze-location', {
+        body: { latitude: lat, longitude: lng },
+      });
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch risk data');
+      if (error) {
+        throw new Error(error.message || 'Failed to fetch risk data');
       }
-
-      const data = await response.json();
       
       setRiskData({
         latitude: data.latitude,
