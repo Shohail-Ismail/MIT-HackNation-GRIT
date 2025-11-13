@@ -195,42 +195,6 @@ const Auth = () => {
                   {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   Sign Up
                 </Button>
-                
-                <div className="mt-6 relative overflow-hidden rounded-lg border border-border/50 backdrop-blur-sm">
-                  <div 
-                    className="absolute inset-0 opacity-10"
-                    style={{
-                      backgroundImage: `url(${earthHero})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      filter: 'blur(8px)',
-                    }}
-                  />
-                  <div className="relative bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 mt-1">
-                        <Sparkles className="h-5 w-5 text-secondary" />
-                      </div>
-                      <div className="flex-1 space-y-2">
-                        <p className="text-sm font-medium text-foreground">Try the demo account</p>
-                        <div className="space-y-1 text-sm text-muted-foreground">
-                          <p><span className="font-medium text-foreground">Username:</span> demo@example.com</p>
-                          <p><span className="font-medium text-foreground">Password:</span> demo123</p>
-                        </div>
-                        <Button 
-                          type="button"
-                          variant="secondary" 
-                          size="sm"
-                          className="w-full mt-3"
-                          onClick={handleDemoFill}
-                        >
-                          <Sparkles className="mr-2 h-4 w-4" />
-                          Auto-fill Demo Credentials
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </form>
             </TabsContent>
           </Tabs>
