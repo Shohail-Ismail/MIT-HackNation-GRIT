@@ -226,7 +226,7 @@ const Hero = ({ onGetStarted }: { onGetStarted: () => void }) => {
                       <li>
                         •{" "}
                         <a
-                          href="https://www.maxar.com/products/satellite-imagery"
+                          href="https://www.eoportal.org/satellite-missions/worldview-3"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary hover:underline"
@@ -274,7 +274,7 @@ const Hero = ({ onGetStarted }: { onGetStarted: () => void }) => {
                       <li>
                         •{" "}
                         <a
-                          href="https://www.eoportal.org/satellite-missions/worldview-3"
+                          href="https://www.eumetsat.int/meteosat-third-generation"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary hover:underline"
