@@ -9,8 +9,9 @@ const Footer = () => {
             <Shield className="h-4 w-4 text-primary" />
             <p>Built on transparent AI principles - every score is explainable</p>
           </div>
-          <p className="font-medium">MITxOpenAI HackNation 2025 - Shohail Ismail, Chinmay Sharma</p>
+          <p className="font-medium">MITxOpenAI HackNation 2025 Prototype</p>
         </div>
+        <p className="font-medium">Made with Love(able) => Shohail Ismail + Chinmay Sharma</p>
       </div>
     </footer>
   );
