@@ -31,7 +31,7 @@ const QuickStats = ({ factors }: QuickStatsProps) => {
       >
         <span className="flex items-center gap-2">
           <Shield className="h-4 w-4 text-primary" />
-          Quick Analysis
+          Quick Summary
         </span>
         {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
       </button>

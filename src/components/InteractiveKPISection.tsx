@@ -73,7 +73,7 @@ const InteractiveKPISection = ({ overallScore }: InteractiveKPISectionProps) => 
             <div className="space-y-4 pt-2">
               <p className="text-sm text-muted-foreground">
                 This metric identifies the types and quantities of infrastructure exposed to climate risks in the
-                analyzed area. It includes residential properties, commercial buildings, and agricultural land that
+                analysed area. It includes residential properties, commercial buildings, and agricultural land that
                 could be impacted by environmental hazards.
               </p>
               <div className="pt-3 border-t">

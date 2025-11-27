@@ -7,10 +7,10 @@ import { MapPin, Search } from "lucide-react";
 import { toast } from "sonner";
 
 interface LocationInputProps {
-  onAnalyze: (lat: number, lng: number) => void;
+  onAnalyse: (lat: number, lng: number) => void;
 }
 
-const LocationInput = ({ onAnalyze }: LocationInputProps) => {
+const LocationInput = ({ onAnalyse }: LocationInputProps) => {
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
 
@@ -30,7 +30,7 @@ const LocationInput = ({ onAnalyze }: LocationInputProps) => {
       return;
     }
     
-    onAnalyze(lat, lng);
+    onAnalyse(lat, lng);
   };
 
   const useCurrentLocation = () => {
@@ -60,7 +60,7 @@ const LocationInput = ({ onAnalyze }: LocationInputProps) => {
         </div>
         
         <p className="text-sm text-muted-foreground mb-4">
-          Enter a location anywhere on Earth to analyze climate-related risk factors.
+          Enter a location anywhere on Earth to analyse climate-related risk factors.
         </p>
         
         <div className="grid gap-4 md:grid-cols-2">
@@ -92,7 +92,7 @@ const LocationInput = ({ onAnalyze }: LocationInputProps) => {
         <div className="flex gap-2">
           <Button type="submit" className="flex-1 gap-2">
             <Search className="h-4 w-4" />
-            Analyze Risk
+            Analyse Risk
           </Button>
           <Button 
             type="button" 

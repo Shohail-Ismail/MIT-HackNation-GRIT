@@ -119,7 +119,7 @@ export const GeospatialAnalysisPanel = () => {
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Calendar className="h-4 w-4" />
-                    <span>Analyzed</span>
+                    <span>Analysed</span>
                   </div>
                   <p className="font-medium">
                     {new Date(analysis.created_at).toLocaleDateString()}

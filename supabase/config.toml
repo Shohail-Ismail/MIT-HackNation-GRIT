@@ -1,6 +1,6 @@
 project_id = "shuzruoujtztngwzdffo"
 
-[functions.analyze-location]
+[functions.analyse-location]
 verify_jwt = false
 
 [functions.enrich-demographics]
