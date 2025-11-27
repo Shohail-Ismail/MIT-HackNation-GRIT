@@ -17,7 +17,7 @@ serve(async (req) => {
       throw new Error('Latitude and longitude are required');
     }
 
-    console.log(`Analyzing location: ${latitude}, ${longitude}`);
+    console.log(`Analysing location: ${latitude}, ${longitude}`);
 
     // Fetch real climate data from Open-Meteo API (free, no API key needed)
     const climateResponse = await fetch(
@@ -109,13 +109,13 @@ serve(async (req) => {
       }
     };
 
-    console.log('Risk analysis complete:', riskData);
+    console.log('Risk assessment complete:', riskData);
 
     return new Response(JSON.stringify(riskData), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    console.error('Error in analyze-location function:', error);
+    console.error('Error in analyse-location function:', error);
     const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
     return new Response(
       JSON.stringify({ error: errorMessage }),

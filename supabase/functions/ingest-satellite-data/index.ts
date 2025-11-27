@@ -753,7 +753,7 @@ serve(async (req) => {
     // Get Copernicus token
     const token = await getCopernicusToken();
     
-    // Default locations to analyze
+    // Default locations to analyse
     const defaultLocations = [
       { lat: 29.7604, lng: -95.3698, name: 'Houston, TX' },    // Flood-prone
       { lat: 34.0522, lng: -118.2437, name: 'Los Angeles, CA' }, // Wildfire-prone

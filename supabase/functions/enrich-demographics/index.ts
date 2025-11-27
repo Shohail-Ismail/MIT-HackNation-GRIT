@@ -59,7 +59,7 @@ serve(async (req) => {
       let gridRisk: number;
       
       if (point.isCenter) {
-        // Center point uses the actual analyzed risk score
+        // Centre point uses the actual analysed risk score
         gridRisk = riskFactors.overallScore;
       } else {
         // Other points have independent risk based on regional characteristics

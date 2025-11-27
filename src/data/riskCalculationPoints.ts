@@ -2,7 +2,7 @@
 export const floodCalculationPoints = [
   {
     title: "Precipitation Intensity-Duration-Frequency (IDF) Curves",
-    description: "Analyzes extreme rainfall patterns using statistical distributions of precipitation intensity over various durations. This factor receives the highest weight (2.5x) due to its direct correlation with flood magnitude.",
+    description: "Analyses extreme rainfall patterns using statistical distributions of precipitation intensity over various durations. This factor receives the highest weight (2.5x) due to its direct correlation with flood magnitude.",
     formula: "P = \\frac{a \\cdot T^b}{(t_d + c)^d} \\times W_p",
     variables: [
       { symbol: "P", description: "Precipitation intensity factor (mm/hour)" },
@@ -40,7 +40,7 @@ export const floodCalculationPoints = [
       { symbol: "C", description: "Catastrophe model severity score" },
       { symbol: "L_i", description: "Historical loss amount for event i" },
       { symbol: "f_i", description: "Frequency weight for event i" },
-      { symbol: "n", description: "Number of historical events analyzed" },
+      { symbol: "n", description: "Number of historical events analysed" },
       { symbol: "TIV", description: "Total Insured Value of portfolio" }
     ]
   },
@@ -172,7 +172,7 @@ export const stormCalculationPoints = [
   },
   {
     title: "Historical Frequency-Severity Distribution",
-    description: "Analyzes past severe weather events to establish baseline occurrence rates and loss magnitudes. Critical for setting attachment points and exhaustion layers in excess-of-loss treaties.",
+    description: "Analyses past severe weather events to establish baseline occurrence rates and loss magnitudes. Critical for setting attachment points and exhaustion layers in excess-of-loss treaties.",
     formula: "\\lambda_{severity} = \\frac{1}{n} \\sum_{i=1}^{n} \\left(\\frac{L_i}{E_i}\\right) \\times f(T_i)",
     variables: [
       { symbol: "\\lambda_{severity}", description: "Expected annual severity rate" },

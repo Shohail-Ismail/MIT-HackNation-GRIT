@@ -66,13 +66,13 @@ const Index = () => {
     navigate("/auth");
   };
 
-  const analyzeLocation = async (lat: number, lng: number) => {
+  const analyseLocation = async (lat: number, lng: number) => {
     setIsAnalyzing(true);
-    toast.info("Analyzing location with real-time data...");
+    toast.info("Analysing location with real-time data...");
 
     try {
       // Call the edge function using Supabase client (handles auth automatically)
-      const { data, error } = await supabase.functions.invoke("analyze-location", {
+      const { data, error } = await supabase.functions.invoke("analyse-location", {
         body: { latitude: lat, longitude: lng },
       });
 
@@ -91,9 +91,9 @@ const Index = () => {
       setIsAnalyzing(false);
       toast.success("Real-time analysis complete!");
     } catch (error) {
-      console.error("Error analyzing location:", error);
+      console.error("Error analysing location:", error);
       setIsAnalyzing(false);
-      toast.error("Failed to analyze location. Please try again.");
+      toast.error("Failed to analyse location. Please try again.");
     }
   };
 
@@ -138,7 +138,7 @@ const Index = () => {
 
       <main className="container mx-auto px-4 py-12 space-y-12 flex-1">
         <section id="analysis-section" className="max-w-4xl mx-auto">
-          <LocationInput onAnalyze={analyzeLocation} />
+          <LocationInput onAnalyse={analyseLocation} />
         </section>
 
         {riskData && (

@@ -84,7 +84,7 @@ const CalculationMethodology = () => {
               <div className="border-t border-border pt-3">
                 <h4 className="font-semibold text-card-foreground mb-1">Map Risk Distribution</h4>
                 <p className="text-xs">
-                  The map displays a regional risk grid where the center point reflects your analyzed location's risk
+                  The map displays a regional risk grid where the centre point reflects your analysed location's risk
                   score. Surrounding grid points have independent risk assessments based on their geographic
                   characteristics, with natural variation from geographic patterns and local factors. This provides
                   context for understanding regional risk variation.
